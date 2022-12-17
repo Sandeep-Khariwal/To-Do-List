@@ -1,0 +1,55 @@
+.showList{
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    >ul{
+        list-style:none;
+        >li{
+            padding: 0.5rem 1rem;
+            margin: 0.8rem;
+            border-radius: 2rem;
+            background-color: #5dadf8;
+            width: 23rem;
+            margin-right: 3rem;
+            display: flex;
+            align-items: center;
+            >span{
+                flex: 1;
+            }
+            >button{
+                border: none;
+                font-size: 1.2rem;
+                padding-right: 2rem;
+                margin: 0.5rem;
+                background-color: #5dadf8;
+                cursor: pointer;
+                >span{
+                    visibility: hidden;
+                    font-size: x-small;
+                    position: absolute;
+                    z-index: 1;
+                    color: #fff;
+                    background-color: #111;
+                    padding: 0.5rem;
+                    text-align: center; 
+                    border-radius: 1rem;   
+                }
+
+                &:hover{
+                    color: #ae0000;
+                    content: "edit";
+                    >span{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .showList > ul>li{
+      width: 15rem;
+      margin-right: 3rem;
+    }
+}
